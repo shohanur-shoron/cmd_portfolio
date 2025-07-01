@@ -1,0 +1,181 @@
+/* --- CV Inside Terminal Styling --- */
+
+/* The main container for the CV output */
+#cv-output {
+    padding: 10px 0;
+}
+
+/* Big main name heading */
+#cv-output h1 {
+    color: #ffffff; /* Bright white for the main heading */
+    font-size: 1.5em;
+    text-align: center;
+    margin-bottom: 15px;
+    letter-spacing: 2px;
+}
+
+/* Section headings (like "Professional Summary") */
+#cv-output h2 {
+    color: #ffffff; /* White to stand out */
+    text-transform: uppercase;
+    border-bottom: 1px solid #00ff00; /* Green underline */
+    padding-bottom: 5px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 1.1em;
+}
+
+/* Sub-headings (like job titles) */
+#cv-output h3 {
+    color: #ffffff;
+    font-weight: normal;
+    margin: 10px 0 5px 0;
+}
+
+/* Default paragraph text */
+#cv-output p {
+    margin: 0 0 8px 0;
+}
+
+/* Styling for links within the CV */
+#cv-output a {
+    color: #39a7ff; /* A nice cyan/blue for links */
+    text-decoration: underline;
+}
+#cv-output a:hover {
+    color: #89cff0;
+}
+
+/* Styling for lists (ul/li) */
+#cv-output ul {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 5px;
+}
+
+#cv-output li {
+    position: relative;
+    padding-left: 20px; /* Make space for the bullet */
+    margin-bottom: 5px;
+}
+
+/* The bullet point itself */
+#cv-output li::before {
+    content: '•';
+    color: #00ff00; /* Green bullet */
+    position: absolute;
+    left: 0;
+}
+
+/* Bold text inside the CV */
+#cv-output strong {
+    color: #ffffff; /* Make labels like "Backend:" white */
+    font-weight: bold;
+}
+
+/* Specific containers for terminal display */
+.contact-info-terminal,
+.skills-list-terminal,
+.entry-terminal {
+    margin-bottom: 15px;
+
+}
+
+.contact-info-terminal{
+    text-align: center;
+}
+
+.contact-info-terminal span {
+    display: block; /* Each contact item on a new line */
+    margin-bottom: 5px;
+
+}
+
+.contenttext h1 {
+    color: #ffffff; /* White for high contrast */
+    font-size: 1.2em; /* Slightly larger than normal text */
+    border-bottom: 1px solid #00ff00; /* Green underline for separation */
+    padding-bottom: 5px;
+    margin-top: 5px;
+    margin-bottom: 15px; /* Space below the heading */
+}
+
+
+
+
+
+.contenttext ul,
+.contenttext ol {
+    /* Use padding-left instead of margin to keep alignment within the terminal flow */
+    padding-left: 25px; /* Indent the list from the left edge */
+    margin-top: 0.5em;    /* Space above the list */
+    margin-bottom: 0.5em; /* Space below the list */
+}
+
+/* Styling for individual list items */
+.contenttext li {
+    margin-bottom: 0.3em; /* Small space between list items */
+}
+
+/* Unordered list (bullets) */
+.contenttext ul {
+    list-style-type: '- '; /* A common terminal-style bullet */
+}
+
+/* Ordered list (numbers) */
+/* The default numbers are usually fine, but you can style them if needed. */
+/* The padding-left above is the most important part for alignment. */
+
+
+/* --- BONUS: STYLING FOR OTHER MARKDOWN ELEMENTS --- */
+
+/* Styling for strong/bold text */
+.contenttext strong,
+.contenttext b {
+    color: #ffffff; /* Make bold text brighter, e.g., white */
+    font-weight: bold;
+}
+
+/* Styling for emphasis/italic text */
+.contenttext em,
+.contenttext i {
+    color: #00e5e5; /* Use a highlight color for italics */
+    font-style: italic;
+}
+
+
+/* Styling for blockquotes (for > quotes in Markdown) */
+.contenttext blockquote {
+    padding-left: 15px;
+    margin-left: 5px;
+    border-left: 3px solid #666; /* A subtle left border */
+    color: #ccc; /* Dim the text color slightly */
+    font-style: italic;
+}
+
+/* Styling for inline code (`code`) */
+.contenttext code {
+    background-color: #333; /* Dark background for code snippets */
+    color: #f8f8f2;         /* Light text color */
+    padding: 2px 5px;
+    border-radius: 4px;
+    font-family: 'Courier New', Courier, monospace; /* Use a monospaced font */
+}
+
+/* Styling for code blocks (```code block```) */
+.contenttext pre {
+    background-color: #1e1e1e; /* A slightly different background for the block */
+    border: 1px solid #444;
+    border-radius: 5px;
+    padding: 1em;
+    overflow-x: auto; /* Allow horizontal scrolling for long lines of code */
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+/* Ensure the code tag inside a pre tag doesn't get the inline styles */
+.contenttext pre code {
+    background-color: transparent;
+    padding: 0;
+    border-radius: 0;
+}

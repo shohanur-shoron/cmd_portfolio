@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Terminal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'style/terminal_bass.css' %}">
+    <link rel="stylesheet" href="{% static 'style/CVstyle.css'%}">
+</head>
+<body>
+
+    <!-- The Terminal Window -->
+    <div id="terminal">
+        <!-- Header with Mac-style buttons and title -->
+        <div class="terminal-header">
+            <div class="buttons">
+                <span class="btn red"></span>
+                <span class="btn yellow"></span>
+                <span class="btn green"></span>
+            </div>
+            <div class="title">shoron@portfolio: ~</div>
+        </div>
+
+        <!-- Main content area of the terminal -->
+        <div id="terminal-body">
+            <div class="terminal_content">
+                <p class="midiumfont">Welcome to Shohanur Rahman Shoron's Terminal! Type '<span class="redtext">help</span>' to see available commands.</p>
+                <div class="contentbox">
+                    <!-- text will appare here -->
+                    
+                </div>
+            </div>
+
+            <div class="inputbox">
+                <span class="midiumfont dir" id="dirtext">shoron@portfolio: ~</span>
+<!--                (<span style="color: white;">chat</span>)-->
+                <input type="text" name="commands" id="commands" >
+            </div>
+        </div>
+        
+
+
+        <!-- The handle for resizing the terminal -->
+        <div class="resizer" id="resizer"></div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="{% static 'js/terminal_chat.js' %}"></script>
+</body>
+</html>

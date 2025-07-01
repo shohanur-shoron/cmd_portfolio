@@ -1,0 +1,194 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "JetBrains Mono", monospace;
+    font-weight: 200;
+}
+
+
+body {
+    background-color: #1a1c1d; /* Dark background color for the page */
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0;
+    overflow: hidden; /* Prevent scrollbars on the main page */
+}
+
+/* --- Terminal Container Styling --- */
+#terminal {
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    width: 1150px;
+    height: 600px;
+    background-color: #0f0f0f; /* Matte black background */
+    border: 2px solid #00ff00; /* Green border */
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.5); /* Green shadow */
+    display: flex;
+    flex-direction: column;
+    overflow: hidden; /* Keeps content inside the rounded corners */
+    min-width: 300px; /* Minimum size constraints */
+    min-height: 200px;
+}
+
+/* --- Terminal Header --- */
+.terminal-header {
+    background-color: #3c3c3c;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    cursor: move; /* Indicates the header is draggable */
+    user-select: none; /* Prevents text selection while dragging */
+}
+
+.buttons {
+    display: flex;
+}
+
+.btn {
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    margin-right: 8px;
+}
+.red { background-color: #ff5f56; }
+.yellow { background-color: #ffbd2e; }
+.green { background-color: #27c93f; }
+
+.title {
+    color: #ccc;
+    font-size: 14px;
+    margin-left: 10px;
+    flex-grow: 1;
+    text-align: center;
+}
+
+
+
+/* --- Terminal Body --- */
+#terminal-body {
+    padding: 15px;
+    color: #00ff00; /* Green text color */
+    flex-grow: 1; /* Makes the body fill the available space */
+    overflow-y: auto; /* Adds a scrollbar if content overflows */
+}
+
+#terminal-body p {
+    margin: 0 0 5px 0;
+}
+
+.cursor {
+    background-color: #00ff00;
+    animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+    from, to { color: transparent; }
+    50% { color: #00ff00; }
+}
+
+
+/* --- Resizer Handle --- */
+.resizer {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 15px;
+    height: 15px;
+    cursor: se-resize; /* South-East resize cursor */
+}
+
+.redtext{
+    color: red;
+}
+
+.midiumfont{
+    font-size: 1.2rem;
+}
+
+.inputbox {
+    display: flex;
+    align-items: center;
+    padding-top: 8px;
+}
+
+/* Style for the prompt text (e.g., "shoron@portfolio: ~") */
+.dir {
+    color: #00ff00;
+    margin-right: 8px;  /* Add a little space after the prompt */
+    white-space: nowrap; /* Prevent the prompt from wrapping to a new line */
+}
+
+
+#commands {
+    flex-grow: 1; /* This makes the input field take up all remaining space */
+    font-size: 1.2rem;
+    /* Reset default input styling to make it look like terminal text */
+    background-color: transparent;
+    border: none;
+    outline: none;
+
+    color: #00ff00;    /* Green text color as requested */
+    
+    /* --- Styling the blinking cursor (caret) --- */
+    caret-color: #00ff00; /* Sets the color of the cursor to green */
+
+    caret-shape: underscore;
+}
+
+/* A couple of extra styles from your HTML */
+.midiumfont {
+    font-size: 1.1rem; /* You can adjust this */
+}
+
+.redtext {
+    color: #ff5f56;
+}
+
+.contentbox{
+    padding: 5px 5px 5px 0;
+
+    .contenttext{
+        font-size: 1.1rem;
+        padding-bottom: 2px;
+    }
+}
+
+.oldcommands{
+    padding-top: 10px;
+    padding-bottom: 8px;
+    font-size: 1.2rem;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+    padding: 0 1px 0 1px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #00ff00;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #00ff00;
+}
+
+.whitetext{
+    color: white;
+}
+
+.infobox{
+    padding: 5px 0 5px 20px;
+    border-left: 3px solid #00ff00;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    margin-left: 20px;
+}
